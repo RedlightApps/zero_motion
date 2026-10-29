@@ -181,10 +181,6 @@ class _FluidTrayState extends State<FluidTray> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    final targetH = _targetHeight(context);
-    if ((_heightSpring.target - targetH).abs() > 0.5 && !_heightSpring.isAnimating) {
-      _heightSpring.animateTo(targetH);
-    }
     return AnimatedBuilder(
       animation: Listenable.merge([_heightSpring, _offsetSpring]),
       builder: (context, _) {
@@ -195,6 +191,7 @@ class _FluidTrayState extends State<FluidTray> with TickerProviderStateMixin {
           return const SizedBox.shrink();
         }
         return Stack(
+          fit: StackFit.expand,
           alignment: Alignment.bottomCenter,
           children: [
             Positioned.fill(
@@ -208,34 +205,37 @@ class _FluidTrayState extends State<FluidTray> with TickerProviderStateMixin {
                 ),
               ),
             ),
-            Padding(
-              padding: widget.floatingMargin.add(EdgeInsets.only(bottom: MediaQuery.viewInsetsOf(context).bottom)),
-              child: Transform.translate(
-                offset: Offset(0, yOffset),
-                child: GestureDetector(
-                  onVerticalDragUpdate: _handleDragUpdate,
-                  onVerticalDragEnd: _handleDragEnd,
-                  child: Container(
-                    width: double.infinity,
-                    height: h,
-                    decoration: BoxDecoration(color: widget.backgroundColor, borderRadius: widget.borderRadius),
-                    clipBehavior: Clip.antiAlias,
-                    child: OverflowBox(
-                      alignment: Alignment.topCenter,
-                      minHeight: 0,
-                      maxHeight: double.infinity,
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          if (widget.showDragHandle)
-                            Container(
-                              width: 42,
-                              height: 5,
-                              margin: const EdgeInsets.only(top: 12, bottom: 8),
-                              decoration: BoxDecoration(color: const Color(0x44FFFFFF), borderRadius: BorderRadius.circular(99)),
-                            ),
-                          FluidChildSizeMeasure(onSizeChanged: _onChildSizeMeasured, child: widget.child),
-                        ],
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: Padding(
+                padding: widget.floatingMargin.add(EdgeInsets.only(bottom: MediaQuery.viewInsetsOf(context).bottom)),
+                child: Transform.translate(
+                  offset: Offset(0, yOffset),
+                  child: GestureDetector(
+                    onVerticalDragUpdate: _handleDragUpdate,
+                    onVerticalDragEnd: _handleDragEnd,
+                    child: Container(
+                      width: double.infinity,
+                      height: h,
+                      decoration: BoxDecoration(color: widget.backgroundColor, borderRadius: widget.borderRadius),
+                      clipBehavior: Clip.antiAlias,
+                      child: OverflowBox(
+                        alignment: Alignment.topCenter,
+                        minHeight: 0,
+                        maxHeight: double.infinity,
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            if (widget.showDragHandle)
+                              Container(
+                                width: 42,
+                                height: 5,
+                                margin: const EdgeInsets.only(top: 12, bottom: 8),
+                                decoration: BoxDecoration(color: const Color(0x44FFFFFF), borderRadius: BorderRadius.circular(99)),
+                              ),
+                            FluidChildSizeMeasure(onSizeChanged: _onChildSizeMeasured, child: widget.child),
+                          ],
+                        ),
                       ),
                     ),
                   ),

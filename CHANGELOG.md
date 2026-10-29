@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## 1.0.2
+
+- Added animated GIF live showcase (`doc/screenshots/zero_motion_demo.gif`) and auto-choreographed 120Hz interactive tour in `example/` demonstrating Dynamic Island morphing, FluidTray height morphing, Command Palette (`⌘K`), and 3D PhysicsToastDeck.
+
 ## 1.0.1
 
 - Added high-resolution iOS Simulator showcase screenshots (`pubspec.yaml` gallery & `README.md`) and upgraded the interactive 120Hz Bento + Dynamic Island + Harmonic Profile selector example app.

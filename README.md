@@ -10,7 +10,9 @@
 Published and maintained by **[RedLight Apps](https://redlightapps.com)** (`redlightapps.com`) • Created by **Yusuf Kaval**
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/RedlightApps/zero_motion/main/doc/screenshots/zero_motion_showcase.png" width="360" alt="zero_motion 120Hz iOS Simulator Showcase"/>
+  <img src="https://raw.githubusercontent.com/RedlightApps/zero_motion/main/doc/screenshots/zero_motion_demo.gif" width="320" alt="zero_motion 120Hz Live Animated Demo"/>
+  &nbsp;&nbsp;
+  <img src="https://raw.githubusercontent.com/RedlightApps/zero_motion/main/doc/screenshots/zero_motion_showcase.png" width="320" alt="zero_motion 120Hz iOS Simulator Showcase"/>
 </div>
 
 ---
