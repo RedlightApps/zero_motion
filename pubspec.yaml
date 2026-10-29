@@ -5,11 +5,15 @@ name: zero_motion
 description: >-
   120Hz interruptible spring physics, in-place morphing surfaces, Dynamic Island
   capsules, fluid bottom sheets, 3D toast decks, and Cmd+K palette for Flutter.
-version: 1.0.0
+version: 1.0.1
 homepage: https://redlightapps.com
 repository: https://github.com/RedlightApps/zero_motion
 issue_tracker: https://github.com/RedlightApps/zero_motion/issues
 documentation: https://github.com/RedlightApps/zero_motion/blob/main/DOCUMENTATION.md
+
+screenshots:
+  - description: "120Hz Dynamic Island 2D Spring, Harmonic Oscillator Profiles, Bento MorphSurface & 3D PhysicsToastDeck"
+    path: doc/screenshots/zero_motion_showcase.png
 
 funding:
   - https://buymeacoffee.com/yusufkaval

@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## 1.0.1
+
+- Added high-resolution iOS Simulator showcase screenshots (`pubspec.yaml` gallery & `README.md`) and upgraded the interactive 120Hz Bento + Dynamic Island + Harmonic Profile selector example app.
+
 ## 1.0.0
 
 * **Initial Stable Release (`RedLight Apps` — `redlightapps.com` / Yusuf Kaval)**

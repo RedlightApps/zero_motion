@@ -150,16 +150,10 @@ class _DynamicIslandCapsuleState extends State<DynamicIslandCapsule>
       final b = _sizeForMode(widget.mode);
       _sizeSolver.jumpTo(Offset(
         GestureSpringController.applyRubberBand(
-          b.width + _stretchDelta.dx * 0.4,
-          minBound: widget.minimalSize.width,
-          maxBound: widget.expandedSize.width + 20,
-          dimension: 80,
+          b.width + _stretchDelta.dx * 0.4, minBound: widget.minimalSize.width, maxBound: widget.expandedSize.width + 20, dimension: 80,
         ),
         GestureSpringController.applyRubberBand(
-          b.height + _stretchDelta.dy * 0.6,
-          minBound: widget.minimalSize.height,
-          maxBound: widget.expandedSize.height + 24,
-          dimension: 80,
+          b.height + _stretchDelta.dy * 0.6, minBound: widget.minimalSize.height, maxBound: widget.expandedSize.height + 24, dimension: 80,
         ),
       ));
     });
