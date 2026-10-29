@@ -1,0 +1,25 @@
+# pub.dev yayını sırasında derleme, git ve yerel IDE dosyalarını hariç tut
+.DS_Store
+.git/
+.github/
+.gitignore
+.dart_tool/
+.idea/
+.vscode/
+build/
+coverage/
+*.iml
+pubspec.lock
+
+# example/ dizinini hafif tut
+example/.dart_tool/
+example/.idea/
+example/build/
+example/ios/
+example/macos/
+example/android/
+example/linux/
+example/windows/
+example/web/
+example/.metadata
+example/pubspec.lock

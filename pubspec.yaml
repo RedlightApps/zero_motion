@@ -1,0 +1,44 @@
+# Published & Maintained by RedLight Apps (https://redlightapps.com)
+# Verified Publisher Domain: redlightapps.com
+# Author & Creator: Yusuf Kaval (RedLight Apps)
+name: zero_motion
+description: >-
+  120Hz interruptible spring physics, in-place morphing surfaces, Dynamic Island
+  capsules, fluid bottom sheets, 3D toast decks, and Cmd+K palette for Flutter.
+version: 1.0.0
+homepage: https://redlightapps.com
+repository: https://github.com/RedlightApps/zero_motion
+issue_tracker: https://github.com/RedlightApps/zero_motion/issues
+documentation: https://github.com/RedlightApps/zero_motion/blob/main/DOCUMENTATION.md
+
+funding:
+  - https://buymeacoffee.com/yusufkaval
+  - https://github.com/sponsors/kvlyusuf
+  - https://github.com/sponsors/RedlightApps
+
+topics:
+  - animation
+  - physics
+  - bottom-sheet
+  - toast
+  - ui
+
+platforms:
+  android:
+  ios:
+  linux:
+  macos:
+  web:
+  windows:
+
+environment:
+  sdk: ^3.10.0
+  flutter: ">=3.24.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
